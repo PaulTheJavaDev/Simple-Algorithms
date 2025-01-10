@@ -7,17 +7,18 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //sortArrayLowBig();
+        
+        int[] arrayExample = {14, 52, 73, 2, 93};
+        
         //twoSum(new int[]{2, 11, 5, 4}, 9);
-        //sortArrayBigLow();
-        //reverseArray(new int[]{1, 2, 3, 4});
-        findMedian(new int[] {14, 52, 73, 2, 93});
+        //sortArrayLowBig(arrayExample);
+        //sortArrayBigLow(arrayExample);
+        //reverseArray(arrayExample);
+        //findMedian(arrayExample);
     }
 
-    public static void sortArrayLowBig() {
-
-        int array[] = {2, 6, 4, 16, 12};
-        sort(array);
+    public static void sortArrayLowBig(int[] array) {
+        sort(array); //guess what it does
 
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
@@ -27,8 +28,10 @@ public class Main {
 
     public static int[] twoSum(int[] nums, int target) {
 
+        //loops through the array
         for (int i = 0; i < nums.length; i++) {
 
+            //checks if the array is empty
             if (nums.length == 0) {
                 System.out.println("No pair found.");
                 break;
@@ -45,8 +48,7 @@ public class Main {
     }
 
     public static void sortArrayBigLow(int[] array) {
-        array = new int[]{9, 24, 164, 93, 1, 57};
-        sort(array);
+        sort(array); //guess again
 
         for (int i = array.length; i > 0; i--) {
             System.out.println(array[i - 1]);
@@ -56,9 +58,9 @@ public class Main {
     public static void reverseArray(int[] array) {
 
         for (int i = 0; i < array.length / 2; i++) {
-            int t = array[i];
+            int j = array[i];
             array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = t;
+            array[array.length - 1 - i] = j;
         }
 
         System.out.println("" + Arrays.toString(array));
