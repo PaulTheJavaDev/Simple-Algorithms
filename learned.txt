@@ -1,0 +1,4 @@
+In this coding project I learned the following:
+
+-better understanding of for loops
+-learned how to iterate through Arrays
